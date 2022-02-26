@@ -10,8 +10,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('student_personal_details', function (Blueprint $table) {
-            $table->id();
-            $table->string('studentId', 30);
+            $table->string('studentId', 30)->unique();
             $table->foreign('studentId')->references('user_id')->on('users')->onDelete('cascade')->onUpdate('cascade');
             $table->string('nic', 20);
             $table->string('designation', 5);
@@ -26,9 +25,9 @@ return new class extends Migration
             $table->integer('weight');
             $table->integer('height');
             $table->string('address', 500);
-            $table->string('image', 200);
+            $table->string('image', 200)->nullable();
             $table->string('category', 10);
-            $table->string('faculty', 30);
+            $table->string('faculty', 50);
             $table->foreign('faculty')->references('faculty')->on('faculties')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });

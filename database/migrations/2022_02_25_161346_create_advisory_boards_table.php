@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name', 200);
             $table->string('gender', 6);
             $table->string('role', 30);
-            $table->string('faculty', 30);
+            $table->string('faculty', 50);
             $table->string('current_status', 20);
             $table->timestamps();
         });

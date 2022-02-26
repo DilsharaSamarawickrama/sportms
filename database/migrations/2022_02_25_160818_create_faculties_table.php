@@ -11,7 +11,7 @@ return new class extends Migration
     {
         Schema::create('faculties', function (Blueprint $table) {
             $table->id();
-            $table->string('faculty', 30)->unique();
+            $table->string('faculty', 50)->unique();
             $table->string('student_index', 3)->unique();
             $table->timestamps();
         });
