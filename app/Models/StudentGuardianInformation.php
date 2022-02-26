@@ -5,8 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class SportParticipatedLevel extends Model
+class StudentGuardianInformation extends Model
 {
     use HasFactory;
-    protected $fillable=['level'];
+    protected $fillable=['studentId', 'designation', 'name', 'contact', 'email', 'address'];
 }

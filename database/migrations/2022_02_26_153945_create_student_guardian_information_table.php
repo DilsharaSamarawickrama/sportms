@@ -9,19 +9,20 @@ return new class extends Migration
 
     public function up()
     {
-        Schema::create('student_education_histories', function (Blueprint $table) {
-            $table->id();
-            $table->string('studentId', 30);
+        Schema::create('student_guardian_information', function (Blueprint $table) {
+            $table->string('studentId', 30)->unique();
             $table->foreign('studentId')->references('studentId')->on('student_personal_details')->onDelete('cascade')->onUpdate('cascade');
-            $table->string('school', 200);
-            $table->year('from_year');
-            $table->year('to_year');
+            $table->string('designation', 5);
+            $table->string('name', 200);
+            $table->string('contact', 10);
+            $table->string('email', 200);
+            $table->string('address', 500);
             $table->timestamps();
         });
     }
 
     public function down()
     {
-        Schema::dropIfExists('student_education_histories');
+        Schema::dropIfExists('student_guardian_information');
     }
 };

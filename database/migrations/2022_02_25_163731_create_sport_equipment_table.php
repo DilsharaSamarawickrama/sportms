@@ -6,24 +6,22 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
+
     public function up()
     {
         Schema::create('sport_equipment', function (Blueprint $table) {
             $table->id();
+            $table->string('sport', 30);
+            $table->foreign('sport')->references('sport')->on('sports')->onDelete('cascade')->onUpdate('cascade');
+            $table->string('equipment', 200);
+            $table->integer('normal_quantity');
+            $table->integer('normal_available_quantity');
+            $table->integer('pool_quantity');
+            $table->integer('pool_available_quantity');
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::dropIfExists('sport_equipment');

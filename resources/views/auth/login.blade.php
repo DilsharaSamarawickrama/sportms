@@ -20,7 +20,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <label for="uid">{{ __('User ID') }}</label>
-                        <input id="uid" type="text" class="form-control @error('uid') is-invalid @enderror" name="uid" value="{{ old('uid') }}" required autocomplete="uid" autofocus placeholder="XX/XXXX/XXX">
+                        <input id="uid" type="text" class="form-control @error('uid') is-invalid @enderror" name="uid" value="{{ old('uid') }}" required autocomplete="uid" autofocus>
 
                         @error('uid')
                             <span class="invalid-feedback" role="alert">
