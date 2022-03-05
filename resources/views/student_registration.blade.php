@@ -20,7 +20,7 @@
                 <div class="row">
                     <div class="col-md-4">
                         <label for="index">Student Index Number</label>
-                        <input type="text" name="student_index" oninput="this.className = ''" id="sid" required>
+                        <input type="text" name="student_index" id="sid" required>
                     </div>
                     <div class="col-md-8">
                         <label for="faculty">Faculty</label>
@@ -35,51 +35,51 @@
                 <div class="row">
                     <div class="col-md-4">
                         <label for="designation">Designation</label>
-                        <input type="radio" name="sdesig" value="Mr" oninput="this.className = ''" id="sdesig"> Mr.
-                        <input type="radio" name="sdesig" value="Miss" oninput="this.className = ''" id="sdesig"> Miss.
-                        <input type="radio" name="sdesig" value="Mrs" oninput="this.className = ''" id="sdesig"> Mrs.
-                        <input type="radio" name="sdesig" value="Rev" oninput="this.className = ''" id="sdesig"> Rev.
+                        <input type="radio" name="sdesig" value="Mr" id="sdesig"> Mr.
+                        <input type="radio" name="sdesig" value="Miss" id="sdesig"> Miss.
+                        <input type="radio" name="sdesig" value="Mrs" id="sdesig"> Mrs.
+                        <input type="radio" name="sdesig" value="Rev" id="sdesig"> Rev.
                     </div>
                     <div class="col-md-8">
                         <label for="name">Full Name</label>
-                        <input type="text" pattern="[a-zA-Z].{20,}" title="Please enter full name in english" name="sname" oninput="this.className = ''" id="sname">
+                        <input type="text" pattern="[a-zA-Z].{20,}" title="Please enter full name in english" name="sname" id="sname">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-4">
                         <label for="gender">Gender</label>
-                        <input type="radio" name="sgender" value="Male" oninput="this.className = ''" id="sgender"> Male
-                        <input type="radio" name="sgender" value="Female" oninput="this.className = ''" id="sgender"> Female
+                        <input type="radio" name="sgender" value="Male" id="sgender"> Male
+                        <input type="radio" name="sgender" value="Female" id="sgender"> Female
                     </div>
                     <div class="col-md-4">
                         <label for="telephone">Telephone</label>
-                        <input type="text" pattern="[0-9]{10}" title="Please enter your mobile phone number" name="stelephone" oninput="this.className = ''" id="stelephone">
+                        <input type="text" pattern="[0-9]{10}" title="Please enter your mobile phone number" name="stelephone" id="stelephone">
                     </div>
                     <div class="col-md-4">
                         <label for="email">Email</label>
-                        <input type="email" name="semail" id="semail" oninput="this.className = ''">
+                        <input type="email" name="semail" id="semail">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
                         <label for="address">Address</label>
-                        <input type="text" name="sline1" placeholder="Line 1" oninput="this.className = ''" id="sline1">
-                        <input type="text" name="sline2" placeholder="Line 2" oninput="this.className = ''" id="sline2">
-                        <input type="text" name="sline3" placeholder="Line 3" oninput="this.className = ''" id="sline3">
+                        <input type="text" name="sline1" placeholder="Line 1" id="sline1">
+                        <input type="text" name="sline2" placeholder="Line 2" id="sline2">
+                        <input type="text" name="sline3" placeholder="Line 3" id="sline3">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-4">
                         <label for="nic">National ID</label>
-                        <input type="text" name="snic" maxlength="12" pattern="[0-9]{9}[v|V|x|X]|[0-9]{12}" title="Please enter valid National Identity Number" oninput="this.className = ''" id="snic">
+                        <input type="text" name="snic" maxlength="12" pattern="[0-9]{9}[v|V|x|X]|[0-9]{12}" title="Please enter valid National Identity Number" id="snic">
                     </div>
                     <div class="col-md-4">
                         <label for="bday">Birth Day</label>
-                        <input type="date" name="sbday" oninput="this.className = ''" id="sbday">
+                        <input type="date" name="sbday" id="sbday">
                     </div>
                     <div class="col-md-4">
                         <label for="bplace">Birth Place</label>
-                        <input type="text" name="sbplace" oninput="this.className = ''" id="sbplace">
+                        <input type="text" name="sbplace" id="sbplace">
                     </div>
                 </div>
                 <div class="row">
@@ -94,11 +94,11 @@
                     </div>
                     <div class="col-md-4">
                         <label for="weight">Weight (KG)</label>
-                        <input type="number" name="sweight" oninput="this.className = ''" id="sweight">
+                        <input type="number" name="sweight" id="sweight">
                     </div>
                     <div class="col-md-4">
                         <label for="height">Height (CM)</label>
-                        <input type="number" name="sheight" oninput="this.className = ''" id="sheight">
+                        <input type="number" name="sheight" id="sheight">
                     </div>
                 </div>
             </div>
@@ -108,32 +108,32 @@
                 <div class="row">
                     <div class="col-md-4">
                         <label for="designation">Designation</label>
-                        <input type="radio" name="edesig" value="Mr" oninput="this.className = ''"> Mr.
-                        <input type="radio" name="edesig" value="Miss" oninput="this.className = ''"> Miss.
-                        <input type="radio" name="edesig" value="Mrs" oninput="this.className = ''"> Mrs.
-                        <input type="radio" name="edesig" value="Rev" oninput="this.className = ''"> Rev.
+                        <input type="radio" name="edesig" value="Mr"> Mr.
+                        <input type="radio" name="edesig" value="Miss"> Miss.
+                        <input type="radio" name="edesig" value="Mrs"> Mrs.
+                        <input type="radio" name="edesig" value="Rev"> Rev.
                     </div>
                     <div class="col-md-8">
                         <label for="name">Full Name</label>
-                        <input type="text" name="ename" oninput="this.className = ''">
+                        <input type="text" name="ename">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6">
                         <label for="phone">Telephone</label>
-                        <input type="tel" pattern="[0-9]{10}"  name="etelephone" oninput="this.className = ''">
+                        <input type="tel" pattern="[0-9]{10}"  name="etelephone">
                     </div>
                     <div class="col-md-6">
                         <label for="email">Email</label>
-                        <input type="email" name="eemail" placeholder="Email is not compulsory" oninput="this.className = ''">
+                        <input type="email" name="eemail" placeholder="Email is not compulsory">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
                         <label for="address">Address</label>
-                        <input type="text" name="eline1" placeholder="Line 1" oninput="this.className = ''">
-                        <input type="text" name="eline2" placeholder="Line 2" oninput="this.className = ''">
-                        <input type="text" name="eline3" placeholder="Line 3" oninput="this.className = ''">
+                        <input type="text" name="eline1" placeholder="Line 1">
+                        <input type="text" name="eline2" placeholder="Line 2">
+                        <input type="text" name="eline3" placeholder="Line 3">
                     </div>
                 </div>
             </div>
@@ -209,76 +209,82 @@
                 return false;
             }
             showTab(currentTab);
+
+            // alert(currentTab);
         }
 
         function validateForm() {
-            var x, i, valid = false, desig="", gender="";
-            x = document.getElementsByClassName("tab");
-
-            if (currentTab == 0)
-            {
-                var id=document.getElementById('sid').value;
-                var fac=document.getElementById('sfac').value;
-                var name=document.getElementById('sname').value;
-                var telephone=document.getElementById('stelephone').value;
-                var email=document.getElementById('semail').value;
-                var l1=document.getElementById('sline1').value;
-                var nic=document.getElementById('snic').value;
-                var bday=document.getElementById('sbday').value;
-                var bplace=document.getElementById('sbplace').value;
-                var bgroup=document.getElementById('sblood_group').value;
-                var weight=document.getElementById('sweight').value;
-                var height=document.getElementById('sheight').value;
-
-                var designation=document.querySelectorAll('input[name="sdesig"]');
-                for (i = 0; i < designation.length; i++)
-                {
-                    if (designation[i].checked)
-                    {
-                        desig=designation[i].value;
-                    }
-                }
-
-                var sgender=document.querySelectorAll('input[name="sgender"]');
-                for (i = 0; i < sgender.length; i++)
-                {
-                    if (sgender[i].checked)
-                    {
-                        gender=sgender[i].value;
-                    }
-                }
-
-               if (id != "" && fac != "" && name != "" && telephone != "" && email != "" && l1 != "" && nic != "" && bday != "" && bplace != "" && bgroup != "" && weight != "" && height != "" && desig != "" && gender != "")
-               {
-                   valid = true;
-               }
-               else{
-                   document.getElementById('errmsg0').style.display ='block';
-               }
-            }
-            if(currentTab == 1)
-            {
-                var ename=document.getElementById('ename').value;
-                var etelephone=document.getElementById('etelephone').value;
-                var el1=document.getElementById('eline1').value;
-
-                var edesignation=document.querySelectorAll('input[name="edesig"]');
-                for (i = 0; i < edesignation.length; i++)
-                {
-                    if (edesignation[i].checked)
-                    {
-                        desig=edesignation[i].value;
-                    }
-                }
-
-                if (ename != "" && etelephone != "" && el1 != "" && desig != "")
-                {
-                    valid = true;
-                }
-                else{
-                    document.getElementById('errmsg0').style.display ='block';
-                }
-            }
+            // var x, i, valid = false, desig="", gender="";
+            // x = document.getElementsByClassName("tab");
+            //
+            // if (currentTab == 0)
+            // {
+            //     var id=document.getElementById('sid').value;
+            //     var fac=document.getElementById('sfac').value;
+            //     var name=document.getElementById('sname').value;
+            //     var telephone=document.getElementById('stelephone').value;
+            //     var email=document.getElementById('semail').value;
+            //     var l1=document.getElementById('sline1').value;
+            //     var nic=document.getElementById('snic').value;
+            //     var bday=document.getElementById('sbday').value;
+            //     var bplace=document.getElementById('sbplace').value;
+            //     var bgroup=document.getElementById('sblood_group').value;
+            //     var weight=document.getElementById('sweight').value;
+            //     var height=document.getElementById('sheight').value;
+            //
+            //     var designation=document.querySelectorAll('input[name="sdesig"]');
+            //     for (i = 0; i < designation.length; i++)
+            //     {
+            //         if (designation[i].checked)
+            //         {
+            //             desig=designation[i].value;
+            //         }
+            //     }
+            //
+            //     var sgender=document.querySelectorAll('input[name="sgender"]');
+            //     for (i = 0; i < sgender.length; i++)
+            //     {
+            //         if (sgender[i].checked)
+            //         {
+            //             gender=sgender[i].value;
+            //         }
+            //     }
+            //
+            //    if (id != "" && fac != "" && name != "" && telephone != "" && email != "" && l1 != "" && nic != "" && bday != "" && bplace != "" && bgroup != "" && weight != "" && height != "" && desig != "" && gender != "")
+            //    {
+            //        valid = true;
+            //    }
+            //    else{
+            //        valid = false;
+            //        document.getElementById('errmsg0').style.display ='block';
+            //    }
+            // }
+            // if(currentTab == 1)
+            // {
+            //     var ename=document.getElementById('ename').value;
+            //     var etelephone=document.getElementById('etelephone').value;
+            //     var el1=document.getElementById('eline1').value;
+            //
+            //     var edesignation=document.querySelectorAll('input[name="edesig"]');
+            //     for (i = 0; i < edesignation.length; i++)
+            //     {
+            //         if (edesignation[i].checked)
+            //         {
+            //             desig=edesignation[i].value;
+            //         }
+            //     }
+            //
+            //     alert(ename);
+            //
+            //     if (ename != "" && etelephone != "" && el1 != "" && desig != "")
+            //     {
+            //         valid = true;
+            //     }
+            //     else{
+            //         valid = false;
+            //         document.getElementById('errmsg0').style.display ='block';
+            //     }
+            // }
 
             if (valid) {
                 document.getElementsByClassName("step")[currentTab].className += " finish";
@@ -295,5 +301,3 @@
         }
     </script>
 @endsection
-
-
