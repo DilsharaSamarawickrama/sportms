@@ -147,15 +147,77 @@
                     </div>
                     <div class="col-md-2">
                         <label for="from">From</label>
-                        <input type="number" placeholder="YYYY" name="from">
+                        <input type="number" placeholder="YYYY" name="fromy">
                     </div>
                     <div class="col-md-2">
                         <label for="to">To</label>
-                        <input type="number" placeholder="YYYY" name="to">
+                        <input type="number" placeholder="YYYY" name="toy">
                     </div>
                     <div class="col-md-2">
                         <br>
-                        <button type="submit" name="add">Add</button>
+                        <button type="submit" name="add_scl">Add</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab">
+                <legend>Sports Information</legend>
+                <strong>Sports Participation</strong>
+                <br>
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="scl">School</label>
+                        <select name="scl">
+                            <option>Select</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="sprt">Sport</label>
+                        <select name="sprt">
+                            <option>Select</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="lvl">Level</label>
+                        <select name="lvl">
+                            <option>Select:</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="achievement">Achievement</label>
+                        <input type="text" name="ach">
+                    </div>
+                    <div class="col-md-2">
+                        <br>
+                        <button type="submit" name="addparticipated">Add</button>
+                    </div>
+                </div>
+
+                <br>
+                <strong>Sports which are willing to do in university life</strong>
+                <br>
+
+                <div class="row">
+                    <div class="col-md-10">
+                        <select name="sport">
+                            <option>Select sports as priority:</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <button type="submit" name="addsports">Add</button>
+                    </div>
+                </div>
+
+                <br>
+                <strong>If you have any Health Conditions, Attach your medical evedence</strong>
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="file">Select your medical</label>
+                        <input type="file"  name="fileToUpload">
+                    </div>
+                    <div class="col-md-2">
+                        <br>
+                        <button type="submit" name="uploadFile">Upload</button>
                     </div>
                 </div>
             </div>
@@ -198,11 +260,11 @@
         function nextPrev(n) {
             var x = document.getElementsByClassName("tab");
 
-            if (n == 1 && !validateForm())
-            {
-                document.getElementById('errmsg0').style.display ='block';
-                return false;
-            }
+            // if (n == 1 && !validateForm())
+            // {
+            //     document.getElementById('errmsg0').style.display ='block';
+            //     return false;
+            // }
             x[currentTab].style.display = "none";
             currentTab = currentTab + n;
             if (currentTab >= x.length) {

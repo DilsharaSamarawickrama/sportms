@@ -25,6 +25,10 @@ class StudentRegistrationController
 
     public function insert(Request $request)
     {
+        if (isset($_POST['add_scl']))
+        {
+
+        }
 
         $l1=$request->get('sline1');
         $l2=$request->get('sline2');
