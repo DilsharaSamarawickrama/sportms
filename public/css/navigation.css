@@ -1,0 +1,31 @@
+a{
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none !important;
+    position: relative;
+    font-size: 20px;
+}
+
+.navbar-custom {
+    background-color: #692123;
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: rgba(255, 255, 255, 0.7)
+}
+
+.navbar-custom .navbar-tog{
+    background-color: #dfa828;
+}
+
+.nav-link:hover, .nav-link:active, .nav-link:focus {
+    outline: none;
+    text-decoration: none !important;
+    color: #dfa828;
+}
+
+.nav-link:after{
+    outline: none;
+    text-decoration: none !important;
+    color: #dfa828;
+}
