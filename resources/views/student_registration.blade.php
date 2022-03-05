@@ -139,7 +139,25 @@
             </div>
 
             <div class="tab">
-
+                <legend>Education History</legend>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="scl">School</label>
+                        <input type="text" name="scl">
+                    </div>
+                    <div class="col-md-2">
+                        <label for="from">From</label>
+                        <input type="number" placeholder="YYYY" name="from">
+                    </div>
+                    <div class="col-md-2">
+                        <label for="to">To</label>
+                        <input type="number" placeholder="YYYY" name="to">
+                    </div>
+                    <div class="col-md-2">
+                        <br>
+                        <button type="submit" name="add">Add</button>
+                    </div>
+                </div>
             </div>
 
             <div class="row">
@@ -182,7 +200,6 @@
 
             if (n == 1 && !validateForm())
             {
-                document.getElementById('errmsg0').style.display ='block';
                 return false;
             }
             x[currentTab].style.display = "none";
@@ -195,7 +212,7 @@
         }
 
         function validateForm() {
-            var x, i, valid = false;
+            var x, i, valid = false, desig="", gender="";
             x = document.getElementsByClassName("tab");
 
             if (currentTab == 0)
@@ -213,32 +230,54 @@
                 var weight=document.getElementById('sweight').value;
                 var height=document.getElementById('sheight').value;
 
-                // var designation=document.querySelectorAll('input[name="sdesig"]');
-                // for (i = 0; i < designation.length; i++)
-                // {
-                //     if (designation[i].checked)
-                //     {
-                //         desig=designation[i].value;
-                //     }
-                // }
-                //
-                // var sgender=document.querySelectorAll('input[name="sgender"]');
-                // for (i = 0; i < sgender.length; i++)
-                // {
-                //     if (sgender[i].checked)
-                //     {
-                //         gender=sgender[i].value;
-                //     }
-                // }
+                var designation=document.querySelectorAll('input[name="sdesig"]');
+                for (i = 0; i < designation.length; i++)
+                {
+                    if (designation[i].checked)
+                    {
+                        desig=designation[i].value;
+                    }
+                }
 
-               if (id != "" && fac != "" && name != "" && telephone != "" && email != "" && l1 != "" && nic != "" && bday != "" && bplace != "" && bgroup != "" && weight != "" && height != "")
+                var sgender=document.querySelectorAll('input[name="sgender"]');
+                for (i = 0; i < sgender.length; i++)
+                {
+                    if (sgender[i].checked)
+                    {
+                        gender=sgender[i].value;
+                    }
+                }
+
+               if (id != "" && fac != "" && name != "" && telephone != "" && email != "" && l1 != "" && nic != "" && bday != "" && bplace != "" && bgroup != "" && weight != "" && height != "" && desig != "" && gender != "")
                {
                    valid = true;
                }
-               else
-               {
+               else{
                    document.getElementById('errmsg0').style.display ='block';
                }
+            }
+            if(currentTab == 1)
+            {
+                var ename=document.getElementById('ename').value;
+                var etelephone=document.getElementById('etelephone').value;
+                var el1=document.getElementById('eline1').value;
+
+                var edesignation=document.querySelectorAll('input[name="edesig"]');
+                for (i = 0; i < edesignation.length; i++)
+                {
+                    if (edesignation[i].checked)
+                    {
+                        desig=edesignation[i].value;
+                    }
+                }
+
+                if (ename != "" && etelephone != "" && el1 != "" && desig != "")
+                {
+                    valid = true;
+                }
+                else{
+                    document.getElementById('errmsg0').style.display ='block';
+                }
             }
 
             if (valid) {
