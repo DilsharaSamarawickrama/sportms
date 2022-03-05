@@ -209,11 +209,15 @@
                 </div>
 
                 <br>
-                <strong>If you have any Health Conditions, Attach your medical evedence</strong>
+                <strong>If you have any Health Conditions, Attach your medical evidence</strong>
                 <div class="row">
                     <div class="col-md-4">
                         <label for="file">Select your medical</label>
                         <input type="file"  name="fileToUpload">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="health_conditions">Description about your health condition</label>
+                        <textarea class="col-md-12"></textarea>
                     </div>
                     <div class="col-md-2">
                         <br>
