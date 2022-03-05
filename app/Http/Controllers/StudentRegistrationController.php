@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 
 
 use App\Models\BloodGroup;
+use App\Models\Designation;
 use App\Models\Faculty;
+use App\Models\Gender;
 use App\Models\StudentGuardianInformation;
 use App\Models\StudentPersonalDetail;
 use Illuminate\Http\Request;
@@ -16,7 +18,9 @@ class StudentRegistrationController
     {
         $faculties = Faculty::all();
         $blood_groups = BloodGroup::all();
-        return view('student_registration', compact(['faculties'=> 'faculties'], ['blood_groups'=> 'blood_groups']));
+        $genders = Gender::all();
+        $designations = Designation::all();
+        return view('student_registration', compact(['faculties'=> 'faculties'], ['blood_groups'=> 'blood_groups'], ['genders'=>'genders'], ['designations'=>'designations']));
     }
 
     public function insert(Request $request)

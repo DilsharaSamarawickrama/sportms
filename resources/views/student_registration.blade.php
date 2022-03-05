@@ -35,10 +35,9 @@
                 <div class="row">
                     <div class="col-md-4">
                         <label for="designation">Designation</label>
-                        <input type="radio" name="sdesig" value="Mr" id="sdesig"> Mr.
-                        <input type="radio" name="sdesig" value="Miss" id="sdesig"> Miss.
-                        <input type="radio" name="sdesig" value="Mrs" id="sdesig"> Mrs.
-                        <input type="radio" name="sdesig" value="Rev" id="sdesig"> Rev.
+                        @foreach($designations as $designations)
+                            <input type="radio" name="sdesig" value="{{ $designations->designation }}" id="sdesig"> {{ $designations->designation }}
+                        @endforeach
                     </div>
                     <div class="col-md-8">
                         <label for="name">Full Name</label>
@@ -48,8 +47,9 @@
                 <div class="row">
                     <div class="col-md-4">
                         <label for="gender">Gender</label>
-                        <input type="radio" name="sgender" value="Male" id="sgender"> Male
-                        <input type="radio" name="sgender" value="Female" id="sgender"> Female
+                        @foreach($genders as $genders)
+                            <input type="radio" name="sgender" value="{{ $genders->gender }}" id="sgender"> {{ $genders->gender }}
+                        @endforeach
                     </div>
                     <div class="col-md-4">
                         <label for="telephone">Telephone</label>
@@ -200,6 +200,7 @@
 
             if (n == 1 && !validateForm())
             {
+                document.getElementById('errmsg0').style.display ='block';
                 return false;
             }
             x[currentTab].style.display = "none";
@@ -214,77 +215,15 @@
         }
 
         function validateForm() {
-            // var x, i, valid = false, desig="", gender="";
-            // x = document.getElementsByClassName("tab");
-            //
-            // if (currentTab == 0)
-            // {
-            //     var id=document.getElementById('sid').value;
-            //     var fac=document.getElementById('sfac').value;
-            //     var name=document.getElementById('sname').value;
-            //     var telephone=document.getElementById('stelephone').value;
-            //     var email=document.getElementById('semail').value;
-            //     var l1=document.getElementById('sline1').value;
-            //     var nic=document.getElementById('snic').value;
-            //     var bday=document.getElementById('sbday').value;
-            //     var bplace=document.getElementById('sbplace').value;
-            //     var bgroup=document.getElementById('sblood_group').value;
-            //     var weight=document.getElementById('sweight').value;
-            //     var height=document.getElementById('sheight').value;
-            //
-            //     var designation=document.querySelectorAll('input[name="sdesig"]');
-            //     for (i = 0; i < designation.length; i++)
-            //     {
-            //         if (designation[i].checked)
-            //         {
-            //             desig=designation[i].value;
-            //         }
-            //     }
-            //
-            //     var sgender=document.querySelectorAll('input[name="sgender"]');
-            //     for (i = 0; i < sgender.length; i++)
-            //     {
-            //         if (sgender[i].checked)
-            //         {
-            //             gender=sgender[i].value;
-            //         }
-            //     }
-            //
-            //    if (id != "" && fac != "" && name != "" && telephone != "" && email != "" && l1 != "" && nic != "" && bday != "" && bplace != "" && bgroup != "" && weight != "" && height != "" && desig != "" && gender != "")
-            //    {
-            //        valid = true;
-            //    }
-            //    else{
-            //        valid = false;
-            //        document.getElementById('errmsg0').style.display ='block';
-            //    }
-            // }
-            // if(currentTab == 1)
-            // {
-            //     var ename=document.getElementById('ename').value;
-            //     var etelephone=document.getElementById('etelephone').value;
-            //     var el1=document.getElementById('eline1').value;
-            //
-            //     var edesignation=document.querySelectorAll('input[name="edesig"]');
-            //     for (i = 0; i < edesignation.length; i++)
-            //     {
-            //         if (edesignation[i].checked)
-            //         {
-            //             desig=edesignation[i].value;
-            //         }
-            //     }
-            //
-            //     alert(ename);
-            //
-            //     if (ename != "" && etelephone != "" && el1 != "" && desig != "")
-            //     {
-            //         valid = true;
-            //     }
-            //     else{
-            //         valid = false;
-            //         document.getElementById('errmsg0').style.display ='block';
-            //     }
-            // }
+            var x, y, i, valid = true;
+            x = document.getElementsByClassName("tab");
+            y = x[currentTab].getElementsByTagName("input");
+            for (i = 0; i < y.length; i++) {
+                if (y[i].value == "") {
+                    y[i].className += " invalid";
+                    valid = false;
+                }
+            }
 
             if (valid) {
                 document.getElementsByClassName("step")[currentTab].className += " finish";
